@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bolting_Machine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Consumable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drilling_Machine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electrical_Bracketing_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electrical_Wiring_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Height_Measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Height_Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Industrial_Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jig"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Machine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measurables"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structural_Build_Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Work_Order"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#allocatesMachine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consumes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#executesActivity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#followsOrder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#measuresHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#distance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#finishedTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#firstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lastName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plannedDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plannedStartTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#startedTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Activity-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Height-Measurement-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Height-Sensor-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Smith"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MAJ-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Station-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Work-Order-1"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bolting_Machine"/>
+        <Class IRI="#Machine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Consumable"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device"/>
+        <Class IRI="#Industrial_Equipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drilling_Machine"/>
+        <Class IRI="#Machine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_Bracketing_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_Wiring_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Height_Measure"/>
+        <Class IRI="#Measurables"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Height_Sensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_Resource"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Industrial_Equipment"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jig"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Machine"/>
+        <Class IRI="#Industrial_Equipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Measurables"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#Industrial_Equipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Station"/>
+        <Class IRI="#Industrial_Equipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Structural_Build_Activity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Work_Order"/>
+        <Class IRI="http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Structural_Build_Activity"/>
+        <NamedIndividual IRI="#Activity-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Height_Measure"/>
+        <NamedIndividual IRI="#Height-Measurement-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Height_Sensor"/>
+        <NamedIndividual IRI="#Height-Sensor-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human_Resource"/>
+        <NamedIndividual IRI="#John_Smith"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Jig"/>
+        <NamedIndividual IRI="#MAJ-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Station"/>
+        <NamedIndividual IRI="#Station-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Work_Order"/>
+        <NamedIndividual IRI="#Work-Order-1"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#distance"/>
+        <NamedIndividual IRI="#Height-Measurement-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#time"/>
+        <NamedIndividual IRI="#Height-Measurement-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-08-24T11:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#unit"/>
+        <NamedIndividual IRI="#Height-Measurement-1"/>
+        <Literal>cm</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#allocatesMachine"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#consumes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#containsDevice"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#containsSensor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#executesActivity"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#followsOrder"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#involves"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#measuresHeight"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allocatesMachine"/>
+        <Class IRI="#Work_Order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consumes"/>
+        <Class IRI="#Work_Order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsDevice"/>
+        <Class IRI="#Station"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsSensor"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#executesActivity"/>
+        <Class IRI="#Station"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#followsOrder"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#involves"/>
+        <Class IRI="#Work_Order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#measuresHeight"/>
+        <Class IRI="#Height_Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allocatesMachine"/>
+        <Class IRI="#Machine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consumes"/>
+        <Class IRI="#Consumable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsDevice"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsSensor"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#executesActivity"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#followsOrder"/>
+        <Class IRI="#Work_Order"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#involves"/>
+        <Class IRI="#Human_Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#measuresHeight"/>
+        <Class IRI="#Height_Measure"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#distance"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#finishedTime"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#firstName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#lastName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#plannedDuration"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#plannedStartTime"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#startedTime"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#time"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#unit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#distance"/>
+        <Class IRI="#Height_Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#firstName"/>
+        <Class IRI="#Human_Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lastName"/>
+        <Class IRI="#Human_Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Industrial_Equipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#plannedDuration"/>
+        <Class IRI="#Activity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#plannedStartTime"/>
+        <Class IRI="#Activity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#time"/>
+        <Class IRI="#Height_Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#unit"/>
+        <Class IRI="#Height_Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#distance"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#finishedTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#firstName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#lastName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#plannedDuration"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#plannedStartTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#startedTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#time"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#unit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

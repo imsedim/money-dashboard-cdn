@@ -1,0 +1,291 @@
+Prefix(:=<http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2>
+
+Declaration(Class(:Activity))
+Declaration(Class(:Bolting_Machine))
+Declaration(Class(:Consumable))
+Declaration(Class(:Device))
+Declaration(Class(:Drilling_Machine))
+Declaration(Class(:Electrical_Bracketing_Activity))
+Declaration(Class(:Electrical_Wiring_Activity))
+Declaration(Class(:Height_Measure))
+Declaration(Class(:Height_Sensor))
+Declaration(Class(:Human_Resource))
+Declaration(Class(:Industrial_Equipment))
+Declaration(Class(:Jig))
+Declaration(Class(:Machine))
+Declaration(Class(:Material))
+Declaration(Class(:Measurables))
+Declaration(Class(:Sensor))
+Declaration(Class(:Station))
+Declaration(Class(:Structural_Build_Activity))
+Declaration(Class(:Work_Order))
+Declaration(Class(<http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain>))
+Declaration(Class(<http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain>))
+Declaration(ObjectProperty(:allocatesMachine))
+Declaration(ObjectProperty(:consumes))
+Declaration(ObjectProperty(:containsDevice))
+Declaration(ObjectProperty(:containsSensor))
+Declaration(ObjectProperty(:executesActivity))
+Declaration(ObjectProperty(:followsOrder))
+Declaration(ObjectProperty(:involves))
+Declaration(ObjectProperty(:measuresHeight))
+Declaration(DataProperty(:distance))
+Declaration(DataProperty(:finishedTime))
+Declaration(DataProperty(:firstName))
+Declaration(DataProperty(:lastName))
+Declaration(DataProperty(:name))
+Declaration(DataProperty(:plannedDuration))
+Declaration(DataProperty(:plannedStartTime))
+Declaration(DataProperty(:startedTime))
+Declaration(DataProperty(:time))
+Declaration(DataProperty(:unit))
+Declaration(NamedIndividual(:Activity-1))
+Declaration(NamedIndividual(:Height-Measurement-1))
+Declaration(NamedIndividual(:Height-Sensor-1))
+Declaration(NamedIndividual(:John_Smith))
+Declaration(NamedIndividual(:MAJ-1))
+Declaration(NamedIndividual(:Station-1))
+Declaration(NamedIndividual(:Work-Order-1))
+############################
+#   Object Properties
+############################
+
+# Object Property: :allocatesMachine (:allocatesMachine)
+
+SubObjectPropertyOf(:allocatesMachine owl:topObjectProperty)
+ObjectPropertyDomain(:allocatesMachine :Work_Order)
+ObjectPropertyRange(:allocatesMachine :Machine)
+
+# Object Property: :consumes (:consumes)
+
+SubObjectPropertyOf(:consumes owl:topObjectProperty)
+ObjectPropertyDomain(:consumes :Work_Order)
+ObjectPropertyRange(:consumes :Consumable)
+
+# Object Property: :containsDevice (:containsDevice)
+
+SubObjectPropertyOf(:containsDevice owl:topObjectProperty)
+ObjectPropertyDomain(:containsDevice :Station)
+ObjectPropertyRange(:containsDevice :Device)
+
+# Object Property: :containsSensor (:containsSensor)
+
+SubObjectPropertyOf(:containsSensor owl:topObjectProperty)
+ObjectPropertyDomain(:containsSensor :Device)
+ObjectPropertyRange(:containsSensor :Sensor)
+
+# Object Property: :executesActivity (:executesActivity)
+
+SubObjectPropertyOf(:executesActivity owl:topObjectProperty)
+ObjectPropertyDomain(:executesActivity :Station)
+ObjectPropertyRange(:executesActivity :Activity)
+
+# Object Property: :followsOrder (:followsOrder)
+
+SubObjectPropertyOf(:followsOrder owl:topObjectProperty)
+ObjectPropertyDomain(:followsOrder :Activity)
+ObjectPropertyRange(:followsOrder :Work_Order)
+
+# Object Property: :involves (:involves)
+
+SubObjectPropertyOf(:involves owl:topObjectProperty)
+ObjectPropertyDomain(:involves :Work_Order)
+ObjectPropertyRange(:involves :Human_Resource)
+
+# Object Property: :measuresHeight (:measuresHeight)
+
+SubObjectPropertyOf(:measuresHeight owl:topObjectProperty)
+ObjectPropertyDomain(:measuresHeight :Height_Sensor)
+ObjectPropertyRange(:measuresHeight :Height_Measure)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :distance (:distance)
+
+SubDataPropertyOf(:distance owl:topDataProperty)
+DataPropertyDomain(:distance :Height_Measure)
+DataPropertyRange(:distance xsd:int)
+
+# Data Property: :finishedTime (:finishedTime)
+
+SubDataPropertyOf(:finishedTime owl:topDataProperty)
+DataPropertyRange(:finishedTime xsd:dateTimeStamp)
+
+# Data Property: :firstName (:firstName)
+
+SubDataPropertyOf(:firstName owl:topDataProperty)
+DataPropertyDomain(:firstName :Human_Resource)
+DataPropertyRange(:firstName xsd:string)
+
+# Data Property: :lastName (:lastName)
+
+SubDataPropertyOf(:lastName owl:topDataProperty)
+DataPropertyDomain(:lastName :Human_Resource)
+DataPropertyRange(:lastName xsd:string)
+
+# Data Property: :name (:name)
+
+SubDataPropertyOf(:name owl:topDataProperty)
+DataPropertyDomain(:name :Industrial_Equipment)
+DataPropertyRange(:name xsd:string)
+
+# Data Property: :plannedDuration (:plannedDuration)
+
+SubDataPropertyOf(:plannedDuration owl:topDataProperty)
+DataPropertyDomain(:plannedDuration :Activity)
+DataPropertyRange(:plannedDuration xsd:int)
+
+# Data Property: :plannedStartTime (:plannedStartTime)
+
+SubDataPropertyOf(:plannedStartTime owl:topDataProperty)
+DataPropertyDomain(:plannedStartTime :Activity)
+DataPropertyRange(:plannedStartTime xsd:dateTimeStamp)
+
+# Data Property: :startedTime (:startedTime)
+
+SubDataPropertyOf(:startedTime owl:topDataProperty)
+DataPropertyRange(:startedTime xsd:dateTimeStamp)
+
+# Data Property: :time (:time)
+
+SubDataPropertyOf(:time owl:topDataProperty)
+DataPropertyDomain(:time :Height_Measure)
+DataPropertyRange(:time xsd:dateTimeStamp)
+
+# Data Property: :unit (:unit)
+
+SubDataPropertyOf(:unit owl:topDataProperty)
+DataPropertyDomain(:unit :Height_Measure)
+DataPropertyRange(:unit xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Activity (:Activity)
+
+SubClassOf(:Activity <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain>)
+
+# Class: :Bolting_Machine (:Bolting_Machine)
+
+SubClassOf(:Bolting_Machine :Machine)
+
+# Class: :Consumable (:Consumable)
+
+SubClassOf(:Consumable <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain>)
+
+# Class: :Device (:Device)
+
+SubClassOf(:Device :Industrial_Equipment)
+
+# Class: :Drilling_Machine (:Drilling_Machine)
+
+SubClassOf(:Drilling_Machine :Machine)
+
+# Class: :Electrical_Bracketing_Activity (:Electrical_Bracketing_Activity)
+
+SubClassOf(:Electrical_Bracketing_Activity :Activity)
+
+# Class: :Electrical_Wiring_Activity (:Electrical_Wiring_Activity)
+
+SubClassOf(:Electrical_Wiring_Activity :Activity)
+
+# Class: :Height_Measure (:Height_Measure)
+
+SubClassOf(:Height_Measure :Measurables)
+
+# Class: :Height_Sensor (:Height_Sensor)
+
+SubClassOf(:Height_Sensor :Sensor)
+
+# Class: :Human_Resource (:Human_Resource)
+
+SubClassOf(:Human_Resource <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain>)
+
+# Class: :Industrial_Equipment (:Industrial_Equipment)
+
+SubClassOf(:Industrial_Equipment <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain>)
+
+# Class: :Jig (:Jig)
+
+SubClassOf(:Jig :Device)
+
+# Class: :Machine (:Machine)
+
+SubClassOf(:Machine :Industrial_Equipment)
+
+# Class: :Material (:Material)
+
+SubClassOf(:Material <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain>)
+
+# Class: :Measurables (:Measurables)
+
+SubClassOf(:Measurables <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain>)
+
+# Class: :Sensor (:Sensor)
+
+SubClassOf(:Sensor :Industrial_Equipment)
+
+# Class: :Station (:Station)
+
+SubClassOf(:Station :Industrial_Equipment)
+
+# Class: :Structural_Build_Activity (:Structural_Build_Activity)
+
+SubClassOf(:Structural_Build_Activity :Activity)
+
+# Class: :Work_Order (:Work_Order)
+
+SubClassOf(:Work_Order <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Activity-1 (:Activity-1)
+
+ClassAssertion(:Structural_Build_Activity :Activity-1)
+
+# Individual: :Height-Measurement-1 (:Height-Measurement-1)
+
+ClassAssertion(:Height_Measure :Height-Measurement-1)
+DataPropertyAssertion(:distance :Height-Measurement-1 "120"^^xsd:int)
+DataPropertyAssertion(:time :Height-Measurement-1 "2022-08-24T11:00"^^xsd:dateTimeStamp)
+DataPropertyAssertion(:unit :Height-Measurement-1 "cm"^^xsd:string)
+
+# Individual: :Height-Sensor-1 (:Height-Sensor-1)
+
+ClassAssertion(:Height_Sensor :Height-Sensor-1)
+
+# Individual: :John_Smith (:John_Smith)
+
+ClassAssertion(:Human_Resource :John_Smith)
+
+# Individual: :MAJ-1 (:MAJ-1)
+
+ClassAssertion(:Jig :MAJ-1)
+
+# Individual: :Station-1 (:Station-1)
+
+ClassAssertion(:Station :Station-1)
+
+# Individual: :Work-Order-1 (:Work-Order-1)
+
+ClassAssertion(:Work_Order :Work-Order-1)
+
+
+)
