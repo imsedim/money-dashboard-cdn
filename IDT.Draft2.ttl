@@ -1,0 +1,292 @@
+@prefix : <http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2> .
+
+<http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#allocatesMachine
+:allocatesMachine rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :Work_Order ;
+                  rdfs:range :Machine .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#consumes
+:consumes rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Work_Order ;
+          rdfs:range :Consumable .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#containsDevice
+:containsDevice rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Station ;
+                rdfs:range :Device .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#containsSensor
+:containsSensor rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Device ;
+                rdfs:range :Sensor .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#executesActivity
+:executesActivity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :Station ;
+                  rdfs:range :Activity .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#followsOrder
+:followsOrder rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Activity ;
+              rdfs:range :Work_Order .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#involves
+:involves rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Work_Order ;
+          rdfs:range :Human_Resource .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#measuresHeight
+:measuresHeight rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Height_Sensor ;
+                rdfs:range :Height_Measure .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#distance
+:distance rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Height_Measure ;
+          rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#finishedTime
+:finishedTime rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#firstName
+:firstName rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Human_Resource ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#lastName
+:lastName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Human_Resource ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Industrial_Equipment ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#plannedDuration
+:plannedDuration rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Activity ;
+                 rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#plannedStartTime
+:plannedStartTime rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Activity ;
+                  rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#startedTime
+:startedTime rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#time
+:time rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Height_Measure ;
+      rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#unit
+:unit rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Height_Measure ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Bolting_Machine
+:Bolting_Machine rdf:type owl:Class ;
+                 rdfs:subClassOf :Machine .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Consumable
+:Consumable rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf :Industrial_Equipment .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Drilling_Machine
+:Drilling_Machine rdf:type owl:Class ;
+                  rdfs:subClassOf :Machine .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Electrical_Bracketing_Activity
+:Electrical_Bracketing_Activity rdf:type owl:Class ;
+                                rdfs:subClassOf :Activity .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Electrical_Wiring_Activity
+:Electrical_Wiring_Activity rdf:type owl:Class ;
+                            rdfs:subClassOf :Activity .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Height_Measure
+:Height_Measure rdf:type owl:Class ;
+                rdfs:subClassOf :Measurables .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Height_Sensor
+:Height_Sensor rdf:type owl:Class ;
+               rdfs:subClassOf :Sensor .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Human_Resource
+:Human_Resource rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Industrial_Equipment
+:Industrial_Equipment rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Jig
+:Jig rdf:type owl:Class ;
+     rdfs:subClassOf :Device .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Machine
+:Machine rdf:type owl:Class ;
+         rdfs:subClassOf :Industrial_Equipment .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Measurables
+:Measurables rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf :Industrial_Equipment .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Station
+:Station rdf:type owl:Class ;
+         rdfs:subClassOf :Industrial_Equipment .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Structural_Build_Activity
+:Structural_Build_Activity rdf:type owl:Class ;
+                           rdfs:subClassOf :Activity .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Work_Order
+:Work_Order rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain> .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain
+<http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Business_Domain> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain
+<http://www.semanticweb.org/sedim/ontologies/2022/7/untitled-ontology-16#Industrial_Domain> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Activity-1
+:Activity-1 rdf:type owl:NamedIndividual ,
+                     :Structural_Build_Activity .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Height-Measurement-1
+:Height-Measurement-1 rdf:type owl:NamedIndividual ,
+                               :Height_Measure ;
+                      :distance "120"^^xsd:int ;
+                      :time "2022-08-24T11:00"^^xsd:dateTimeStamp ;
+                      :unit "cm"^^xsd:string .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Height-Sensor-1
+:Height-Sensor-1 rdf:type owl:NamedIndividual ,
+                          :Height_Sensor .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#John_Smith
+:John_Smith rdf:type owl:NamedIndividual ,
+                     :Human_Resource .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#MAJ-1
+:MAJ-1 rdf:type owl:NamedIndividual ,
+                :Jig .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Station-1
+:Station-1 rdf:type owl:NamedIndividual ,
+                    :Station .
+
+
+###  http://www.semanticweb.org/sedim/ontologies/2022/7/IDT.Draft-2#Work-Order-1
+:Work-Order-1 rdf:type owl:NamedIndividual ,
+                       :Work_Order .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
